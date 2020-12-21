@@ -1,0 +1,41 @@
+.start-logo{
+    max-width: 130px;
+    margin-bottom: 30px;
+}
+
+.tags{
+    background-color: #f9f9f9;
+    border-left: 3px solid var(--ion-color-primary);
+    padding: 15px;
+    position: relative;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.tags h1{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin:0;
+}
+
+.tags ion-icon{
+    position: absolute;
+    right: 14px;
+    top: 11px;
+    font-size: 22px;
+}
+
+.social{
+margin-top: 36px;
+}
+
+.social ion-icon{
+    width: 22px;
+    height: 22px;
+    padding: 10px;
+    border-radius: 100px;
+    margin: 0 3px;
+    color: #fff;
+    background: var(--ion-color-primary);
+}

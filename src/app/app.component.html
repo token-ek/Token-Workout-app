@@ -1,0 +1,25 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" menuId="customMenu" type="overlay">
+      <ion-header class="ion-text-center" no-border>
+        <img src="./assets/images/logo_dark.png" class="side-menu-logo">
+      </ion-header>
+      <ion-content>
+        <ion-list lines="none">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+      <ion-footer (click)="logout()" class="ion-text-uppercase">
+        {{signout}}
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet [swipeGesture]="false" mode="md" id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

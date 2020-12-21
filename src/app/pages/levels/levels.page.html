@@ -1,0 +1,30 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        {{strings.ST11}}
+      </ion-title>
+            <ion-buttons slot="start">
+              <app-backbutton color="dark"></app-backbutton>
+            </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let item of levels" [routerLink]="['/wlevels', item.level_id, item.level_title]" size="12" [ngStyle]="{'height': height}">
+        <div class="cardcategory" [style.background-image]="'url(' + (item.level_image | image) + ')'">
+          <div class="overlay">
+          <div class="texts">
+          <h1>{{item.level_title}}</h1>
+          </div>
+        </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

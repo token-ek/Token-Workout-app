@@ -1,0 +1,30 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        {{title}}
+      </ion-title>
+            <ion-buttons slot="start">
+              <app-backbutton color="dark"></app-backbutton>
+            </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <app-empty *ngIf="exercises.length === 0" [title]="strings.ST140"></app-empty>
+
+  <ion-list lines="none" class="ion-padding-top">
+
+  <ion-item *ngFor="let item of exercises" [routerLink]="['/edetails', item.exercise_id]">
+      <ion-avatar slot="start">
+        <img [src]="item.exercise_image | image">
+      </ion-avatar>
+      <ion-label>{{item.exercise_title}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

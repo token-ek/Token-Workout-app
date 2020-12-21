@@ -1,0 +1,56 @@
+<ion-header class="darkheader">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="openMenu()">
+              <ion-icon name="md-menu"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-justify-content-center ion-align-items-center row-header-bg" [ngStyle]="{'height': innerHeight}">
+        <ion-col size="12" class="ion-text-center">
+          <img src="./assets/images/logo.png" class="col-header-logo">
+        </ion-col>
+      </ion-row>
+  
+      <ion-row class="menu-cols align-items-stretch">
+          <ion-col size="6" [routerLink]="['/workouts']">
+            <img src="./assets/images/workouts.png">
+            <ion-label>{{strings.ST1}}</ion-label>
+          </ion-col>
+
+          <ion-col size="6" [routerLink]="['/exercises']">
+              <img src="./assets/images/exercises.png">
+              <ion-label>{{strings.ST2}}</ion-label>
+          </ion-col>
+
+          <ion-col size="6" [routerLink]="['/diets']">
+              <img src="./assets/images/diets.png">
+              <ion-label>{{strings.ST3}}</ion-label>
+          </ion-col>
+            
+          <ion-col size="6" [routerLink]="['/posts']">
+              <img src="./assets/images/blog.png">
+              <ion-label>{{strings.ST4}}</ion-label>
+          </ion-col>
+
+          <ion-col size="6" [routerLink]="['/calculator']">
+              <img src="./assets/images/calculator.png">
+              <ion-label>{{strings.ST105}}</ion-label>
+          </ion-col>
+            
+          <ion-col size="6" [routerLink]="['/motivation']">
+              <img src="./assets/images/quotes.png">
+              <ion-label>{{strings.ST5}}</ion-label>
+          </ion-col>
+
+      </ion-row>
+  
+    </ion-grid>
+  
+  </ion-content>
+  

@@ -1,0 +1,18 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        {{strings.ST9}}
+      </ion-title>
+      <ion-buttons slot="start">
+        <app-backbutton color="dark"></app-backbutton>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <div *ngIf="!isLoading" [innerHTML]="aboutus"></div>
+
+</ion-content>

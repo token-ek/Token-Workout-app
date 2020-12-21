@@ -1,0 +1,87 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        {{strings.ST115}}
+      </ion-title>
+            <ion-buttons slot="start">
+              <app-backbutton color="dark"></app-backbutton>
+            </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <div class="details">
+
+  <img [src]="exercise.exercise_image | image">
+
+  <ion-grid fixed>
+    <ion-row>
+        <ion-col size="4" class="col-icon">
+        <ion-icon name="md-list" color="primary"></ion-icon>
+        <p class="name">{{strings.ST97}}</p>
+        <p class="value">{{exercise.exercise_sets}}</p>
+        </ion-col>
+
+        <ion-col size="4" class="col-icon">
+          <ion-icon name="md-sync" color="primary"></ion-icon>
+          <p class="name">{{strings.ST98}}</p>
+          <p class="value">{{exercise.exercise_reps}}</p>
+        </ion-col>
+
+        <ion-col size="4" class="col-icon">
+            <ion-icon name="md-stopwatch" color="primary"></ion-icon>
+            <p class="name">{{strings.ST99}}</p>
+            <p class="value">{{exercise.exercise_rest}}</p>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+    <div class="tags" (click)=toggleInfo()>
+        <h1>{{strings.ST112}}</h1>
+        <ion-icon [name]="isInfoHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+      </div>
+    
+      <div class="animated fadeIn subinfo" [hidden]="isInfoHidden">
+      <p class="title">{{strings.ST111}}</p>
+      <p class="subtitle">{{exercise.exercise_title}}</p>
+
+      <p class="title">{{strings.ST17}}</p>
+      <p class="subtitle">{{exercise.level_title}}</p>
+
+      </div> 
+    
+      <div class="tags" (click)=toggleInstru()>
+          <h1>{{strings.ST113}}</h1>
+          <ion-icon [name]="isInstruHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+        </div>
+      
+        <div class="animated fadeIn subinfo" [hidden]="isInstruHidden">
+        <app-html [htmlcontent]="exercise.exercise_instructions"></app-html>
+        </div> 
+
+
+        <div class="tags" (click)=toggleTips()>
+            <h1>{{strings.ST114}}</h1>
+            <ion-icon [name]="isTipsHidden ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+          </div>
+        
+          <div class="animated fadeIn subinfo" [hidden]="isTipsHidden">
+          <app-html [htmlcontent]="exercise.exercise_tips"></app-html>
+          </div> 
+
+</div>
+
+
+</ion-content>
+
+<ion-footer mode="ios" no-border>
+    <ion-button (click)="play()" class="primary ion-text-uppercase ion-text-bold" mode="ios" expand="block">
+      {{strings.ST102}}
+        <ion-icon slot="start" name="md-arrow-dropright-circle"></ion-icon>
+    </ion-button>
+  </ion-footer>

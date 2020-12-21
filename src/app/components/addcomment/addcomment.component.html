@@ -1,0 +1,41 @@
+<ion-header class="lightheader" no-border>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+          {{strings.ST83}}
+        </ion-title>
+              <ion-buttons slot="start">
+                  <ion-button (click)="close()" slot="start">
+                      <ion-icon color="dark" mode="md" name="md-arrow-back"></ion-icon>
+                    </ion-button>
+              </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+
+      <form [formGroup]="validationsform" (ngSubmit)="tryAddComment(validationsform.value)">
+
+          <ionic4-star-rating #rating 
+          activeIcon = "ios-star"
+          defaultIcon = "ios-star"
+          activeColor = "#f1c40f" 
+          defaultColor = "rgba(0, 0, 0, 0.2)"
+          readonly = "false"
+          fontSize = "32px"
+          formControlName="rating">
+          </ionic4-star-rating>
+      
+          <div class="line-input">
+            <ion-item mode="ios">
+            <ion-textarea rows="4" formControlName="comment" [placeholder]="strings.ST85" mode="ios"></ion-textarea>
+            </ion-item>
+          </div>
+
+          <ion-button color="primary" type="submit" [disabled]="!validationsform.valid" expand="block" mode="ios">
+            {{strings.ST110}}
+          </ion-button>
+
+        </form>
+
+  </ion-content>
+

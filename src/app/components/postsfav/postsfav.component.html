@@ -1,0 +1,14 @@
+<div *ngIf="posts.length > 0">
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of posts" detail="false">
+        <ion-thumbnail slot="start" [routerLink]="['/pdetails', item.id]">
+            <ion-img [src]="item.image | image"></ion-img>
+          </ion-thumbnail>
+      <ion-label [routerLink]="['/pdetails', item.id]">{{item.title}}</ion-label>
+      <ion-icon (click)="removeFromFavorites(item.id)" name="md-close" mode="ios" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+  
+</div>
+
+<p *ngIf="posts.length === 0">{{strings.ST67}}</p>

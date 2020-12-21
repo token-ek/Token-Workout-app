@@ -1,0 +1,24 @@
+ion-avatar  {     
+    width:100% !important;  
+    height : 100% !important;  
+    max-width: 50px !important;
+    max-height: 50px !important;
+    }
+ion-avatar img{
+    border-radius: 0;
+
+}
+
+ion-item ion-label{
+    padding-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+ion-item{
+    --background-focused:#fff !important;
+    --background-activated:#fff !important;
+    --detail-icon-color: var(--ion-color-primary);
+    --detail-icon-opacity: 1;
+ }

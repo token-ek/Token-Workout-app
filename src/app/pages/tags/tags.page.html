@@ -1,0 +1,21 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        {{strings.ST55}}
+      </ion-title>
+            <ion-buttons slot="start">
+              <app-backbutton color="dark"></app-backbutton>
+            </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <div *ngFor="let item of tags" [routerLink]="['/tposts', item.tag_id, item.tag_title]" class="tags">
+    <h1>{{item.tag_title}}</h1>
+    <ion-icon name="arrow-forward" color="primary" slot="end"></ion-icon>
+  </div>
+
+</ion-content>

@@ -1,0 +1,64 @@
+ion-grid{
+    height: 100%;
+}
+
+ion-row{
+    height: 100%;
+}
+
+.cardcategory{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 8px;
+}
+
+.cardcategory .overlay{
+    background: rgba(0, 0, 0, 0.50);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    border-radius: 8px;
+}
+
+.cardcategory .texts:before{
+    content: "";
+    background: var(--ion-color-primary);
+    height: 3px;
+    display: block;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    margin-bottom: 10px;
+}
+
+.cardcategory .texts{
+    padding-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    position: relative;
+}
+
+.cardcategory .texts h1{
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

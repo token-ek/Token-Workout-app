@@ -1,0 +1,48 @@
+<ion-header class="darkheader" mode="ios" no-border>
+  <ion-toolbar mode="ios">
+      <ion-buttons slot="start">
+          <app-backbutton color="light"></app-backbutton>
+      </ion-buttons>
+      <ion-buttons slot="end">
+            <ion-button (click)="addToFavorites()" slot="start">
+              <ion-icon color="light" mode="md" [name]="icon"></ion-icon>
+              </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+
+    <app-loading *ngIf="isLoading"></app-loading>
+
+    <ion-grid class="ion-no-padding">
+        <ion-row class="header-bg" [style.background-image]="'url(' + (workout.workout_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
+          <div class="text">
+          <p class="name">{{workout.workout_title}}</p>
+          <p class="time">{{workout.workout_duration}}</p>
+        </div>
+        </ion-row>
+        <ion-row class="cols">
+          <ion-col size="6" class="ion-text-center">
+            <p class="text">{{strings.ST16}}</p>
+            <p class="value">{{workout.goal_title}}</p>
+          </ion-col>
+          <ion-col size="6" class="ion-text-center">
+              <p class="text">{{strings.ST17}}</p>
+              <p class="value">{{workout.level_title}}</p>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div class="days">
+
+      <div *ngFor="let item of days let i = index">
+            <div class="tags" [routerLink]="['/weday', workout.workout_id, i+1]">
+                <h1>{{strings.ST87}} {{i+1}}</h1>
+                <ion-icon name="arrow-forward" color="primary" slot="end"></ion-icon>
+            </div>
+      </div>
+
+    </div>
+
+</ion-content>

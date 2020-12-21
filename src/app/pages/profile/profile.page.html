@@ -1,0 +1,75 @@
+<ion-header class="darkheader" mode="ios" no-border>
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+          <app-backbutton color="light"></app-backbutton>
+        </ion-buttons>
+        <ion-buttons slot="end">
+                <ion-icon mode="md" name="md-exit" slot="end">
+                </ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content class="ion-no-padding">
+
+    <app-loading *ngIf="isLoading"></app-loading>
+
+<ion-grid class="ion-no-padding">
+  <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
+    <div class="text">
+    <p class="name">{{name}}</p>
+    <p class="since">{{strings.ST65}} {{since | timeAgo}}</p>
+  </div>
+  </ion-row>
+</ion-grid>
+
+<ion-list style="margin: 0; padding: 0;">
+    <ion-list-header color="primary">
+      <ion-label style="font-weight: bold; letter-spacing: 0;">{{strings.ST56}}</ion-label>
+    </ion-list-header>
+  </ion-list>
+
+<div class="ion-padding">
+
+      <!-- Workouts -->
+
+      <div class="tags" (click)=toggleWorkouts()>
+          <h1>{{strings.ST1}}</h1>
+          <ion-icon [name]="isWorkouts ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+      </div>
+
+      <div class="animated fadeIn" [hidden]="isWorkouts">
+          <app-workoutsfav></app-workoutsfav>
+      </div> 
+
+      <!-- Workouts -->
+
+      <!-- Posts -->
+
+      <div class="tags" (click)=togglePosts()>
+        <h1>{{strings.ST4}}</h1>
+        <ion-icon [name]="isPosts ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+      </div>
+
+      <div class="animated fadeIn" [hidden]="isPosts">
+          <app-postsfav></app-postsfav>
+      </div> 
+
+      <!-- Posts -->
+
+      <!-- Diets -->
+
+      <div class="tags" (click)=toggleDiets()>
+        <h1>{{strings.ST3}}</h1>
+        <ion-icon [name]="isDiets ? 'arrow-forward' : 'arrow-down'" color="primary" slot="end"></ion-icon>
+      </div>
+
+      <div class="animated fadeIn" [hidden]="isDiets">
+          <app-dietsfav></app-dietsfav>
+      </div> 
+
+      <!-- Diets -->
+
+</div>
+
+</ion-content>

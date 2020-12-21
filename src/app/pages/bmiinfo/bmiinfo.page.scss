@@ -1,0 +1,32 @@
+ion-grid{
+    height: 100%;
+}
+ion-row{
+    height: 16%;
+}
+
+ion-col{
+    height: 100%;
+
+}
+
+.bg1{
+    border-radius: 8px;
+    background-color: #f1f2f6;
+    padding: 3px 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+.bg2{
+    border-radius: 8px;
+    padding: 3px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}

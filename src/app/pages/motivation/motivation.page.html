@@ -1,0 +1,26 @@
+<ion-header class="lightheader" no-border>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+          {{strings.ST5}}
+        </ion-title>
+        <ion-buttons slot="start">
+            <app-backbutton color="dark"></app-backbutton>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <ion-slides *ngIf="!isLoading" [options]="slideOpts" mode="ios">
+      <ion-slide class="slide" *ngFor="let quote of quotes">
+        <ion-card mode="ios" class="card">
+          <ion-icon name="md-quote"></ion-icon>
+          <h1>{{quote.quote_title}}</h1>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+
+</ion-content>

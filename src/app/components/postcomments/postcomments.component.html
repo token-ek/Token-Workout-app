@@ -1,0 +1,32 @@
+<ion-header class="lightheader" no-border>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+          {{strings.ST84}}
+        </ion-title>
+              <ion-buttons slot="start">
+                  <ion-button (click)="close()" slot="start">
+                      <ion-icon color="dark" mode="md" name="md-arrow-back"></ion-icon>
+                    </ion-button>
+              </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content fixed>
+
+      <app-loading *ngIf="isLoading"></app-loading>
+      
+      <app-empty *ngIf="postcomments.length === 0" [title]="strings.ST86"></app-empty>
+
+    <ion-card class="comments" *ngFor="let item of postcomments" mode="ios">
+        <ion-card-header>
+            <ion-card-subtitle>
+              <app-postrating [value]="item.rating" color="rgba(0, 0, 0, 0.2)" [size]="16"></app-postrating>
+              <ion-label>{{item.user}}</ion-label>
+            </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          {{item.comment}}
+        </ion-card-content>
+        </ion-card>
+  
+</ion-content>

@@ -1,0 +1,14 @@
+<div *ngIf="workouts.length > 0">
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of workouts" detail="false">
+        <ion-thumbnail slot="start" [routerLink]="['/wdetails', item.id]">
+            <ion-img [src]="item.image | image"></ion-img>
+          </ion-thumbnail>
+      <ion-label [routerLink]="['/wdetails', item.id]">{{item.title}}</ion-label>
+      <ion-icon (click)="removeFromFavorites(item.id)" name="md-close" mode="ios" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+  
+</div>
+
+<p *ngIf="workouts.length === 0">{{strings.ST67}}</p>

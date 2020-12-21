@@ -1,0 +1,23 @@
+.comments ion-card-content{
+    border-bottom: 1px solid #eee;
+    padding-top: 0 !important;
+    font-size: 13px;
+    padding-bottom: 24px;
+}
+
+.comments ion-card-header{
+    padding-top: 0 !important;
+    padding-bottom: 6px !important;
+}
+
+.comments{
+    box-shadow: none !important;
+}
+
+.comments ion-label{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    font-weight: 400;
+}

@@ -1,0 +1,38 @@
+.row-header-bg{
+    background-image: url('../../../assets/images/header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-md:after{
+    display: none !important;
+}
+
+.col-header-logo{
+max-width: 130px;
+}
+
+.menu-cols{
+    padding-top: 30px;
+}
+
+.menu-cols ion-col{
+text-align: center;
+padding: 20px 10px;
+}
+
+.menu-cols ion-col img{
+    max-width: 55px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+};
+
+.menu-cols ion-label{
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: 600;
+    }

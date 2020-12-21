@@ -1,0 +1,45 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        {{strings.ST1}}
+      </ion-title>
+            <ion-buttons slot="start">
+              <app-backbutton color="dark"></app-backbutton>
+            </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fixed>
+
+    <ion-grid>
+      
+        <ion-row>
+          <ion-col [routerLink]="['/goals']">
+            <div class="card-center-image" style="background-image: url('./assets/images/goals.jpg');">
+              <div class="card-center-bg">
+                <div class="card-center-text">
+                <p class="title">{{strings.ST10}}</p>
+                <p class="subtitle">{{strings.ST12}}</p>
+              </div>
+              </div>
+            </div>
+            
+          </ion-col>
+        </ion-row>
+      
+        <ion-row>
+            <ion-col [routerLink]="['/levels']">
+                <div class="card-center-image" style="background-image: url('./assets/images/levels.jpg');">
+                    <div class="card-center-bg">
+                      <div class="card-center-text">
+                          <p class="title">{{strings.ST11}}</p>
+                          <p class="subtitle">{{strings.ST13}}</p>
+                    </div>
+                    </div>
+                  </div>
+            </ion-col>
+          </ion-row>
+
+      </ion-grid>
+
+</ion-content>

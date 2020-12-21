@@ -1,0 +1,21 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        {{strings.ST82}}
+      </ion-title>
+      <ion-buttons slot="start">
+        <app-backbutton color="dark"></app-backbutton>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+  
+  <div *ngIf="!isLoading">
+  <div class="html" [innerHTML]="privacypolicy"></div>
+  <div class="html" [innerHTML]="termsofservice"></div>
+  </div>
+
+</ion-content>

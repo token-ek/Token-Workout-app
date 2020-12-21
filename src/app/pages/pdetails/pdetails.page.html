@@ -1,0 +1,55 @@
+<ion-header class="darkheader" mode="ios" no-border>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+            {{strings.ST130}}
+          </ion-title>
+        <ion-buttons slot="start">
+            <app-backbutton color="light"></app-backbutton>
+        </ion-buttons>
+        <ion-buttons slot="end">
+                <ion-button (click)="addToFavorites()" slot="start">
+                <ion-icon color="light" mode="md" [name]="icon"></ion-icon>
+                </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-no-padding">
+
+      <app-loading *ngIf="isLoading"></app-loading>
+
+      <ion-grid class="ion-no-padding">
+          <ion-row class="header-bg" [style.background-image]="'url(' + (post.post_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
+            <div class="text">
+            <p class="time">{{post.tag_title}}</p>
+            <p class="name">{{post.post_title}}</p>
+            <app-postrating *ngIf="rating > 0" [value]="rating" color="rgba(255, 255, 255, 0.3)" [size]="18"></app-postrating>
+          </div>
+      </ion-row>
+      </ion-grid>
+
+      <ion-grid class="ion-no-padding">
+          <ion-row class="cols">
+              <ion-col size="6" (click)="showComments(post.post_id)" class="col-text ion-justify-content-start">
+                    {{strings.ST84}} ({{count}})
+              </ion-col>
+
+              <ion-col size="6" (click)="addComment(post.post_id)" class="col-text ion-justify-content-end">
+                  {{strings.ST83}}
+                  <ion-icon name="ios-add-circle"></ion-icon>
+              </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+        <div class="ion-padding">
+        <app-html [htmlcontent]="post.post_description"></app-html>
+        </div>
+
+    <div class="date-category">
+        <p><ion-icon name="md-calendar"></ion-icon> {{post.post_date}}</p>
+        <p><ion-icon name="md-folder-open"></ion-icon> {{post.tag_title}}</p>
+    </div>
+
+
+</ion-content>

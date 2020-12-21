@@ -1,0 +1,84 @@
+.header-bg{
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bg .text{
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.60);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+
+.header-bg .name{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 9px;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header-bg .time{
+    color: var(--ion-color-primary);
+    margin-top: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cols{
+background-color: var(--ion-color-primary);
+padding: 10px 0;
+}
+
+.cols .text{
+    color:#ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 5px;
+} 
+
+.cols .value{
+    text-transform: uppercase;
+    margin: 0;
+    color:#ffffff;
+    font-size: 14px;
+    opacity: 0.7;
+} 
+
+.days{
+    padding: 16px;
+}
+
+.tags{
+    background-color: #f9f9f9;
+    border-left: 3px solid var(--ion-color-primary);
+    padding: 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.tags h1{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin:0;
+}
+
+.tags ion-icon{
+    position: absolute;
+    right: 14px;
+    top: 11px;
+    font-size: 22px;
+}

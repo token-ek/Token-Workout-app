@@ -1,0 +1,48 @@
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        {{strings.ST7}}
+      </ion-title>
+      <ion-buttons slot="start">
+        <app-backbutton color="dark"></app-backbutton>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fixed>
+
+<ion-grid fixed style="height: 100%;">
+
+    <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%;">
+      <ion-col size="8" class="ion-text-center">
+        <img src="./assets/images/logo_dark.png" class="start-logo"/>
+  
+        <div class="tags" [routerLink]="['/about']">
+          <h1>{{strings.ST9}}</h1>
+          <ion-icon name="arrow-forward" color="primary" slot="end"></ion-icon>
+        </div>
+
+        <div class="tags" [routerLink]="['/contact']">
+          <h1>{{strings.ST75}}</h1>
+          <ion-icon name="arrow-forward" color="primary" slot="end"></ion-icon>
+        </div>
+
+        <div class="tags" [routerLink]="['/terms']">
+          <h1>{{strings.ST82}}</h1>
+          <ion-icon name="arrow-forward" color="primary" slot="end"></ion-icon>
+        </div>
+
+        <div class="social">
+          <ion-icon (click)="openUrl(config.Facebook)" name="logo-facebook"></ion-icon>
+          <ion-icon (click)="openUrl(config.Youtube)" name="logo-youtube"></ion-icon>
+          <ion-icon (click)="openUrl(config.Twitter)" name="logo-twitter"></ion-icon>
+          <ion-icon (click)="openUrl(config.Instagram)" name="logo-instagram"></ion-icon>
+      </div>
+  
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+
+</ion-content>
+

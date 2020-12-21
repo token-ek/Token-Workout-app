@@ -1,0 +1,51 @@
+.header-bg{
+    background-image: url('../../../assets/images/header.jpg');
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bg .text{
+    color: #fff;
+    text-align: center;
+}
+
+.header-bg .name{
+    color: var(--ion-color-primary);
+    text-align: center;
+    margin-bottom: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.header-bg .since{
+    color: #fff;
+    margin-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.tags{
+    background-color: #f9f9f9;
+    border-left: 3px solid var(--ion-color-primary);
+    padding: 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.tags h1{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin:0;
+}
+
+.tags ion-icon{
+    position: absolute;
+    right: 14px;
+    top: 11px;
+    font-size: 22px;
+}

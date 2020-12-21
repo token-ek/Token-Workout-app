@@ -1,0 +1,83 @@
+<ion-header class="darkheader" mode="ios" no-border>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+            {{strings.ST129}}
+          </ion-title>
+        <ion-buttons slot="start">
+            <app-backbutton color="light"></app-backbutton>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button (click)="addToFavorites()" slot="start">
+            <ion-icon color="light" mode="md" [name]="icon"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-no-padding">
+
+      <app-loading *ngIf="isLoading"></app-loading>
+
+      <ion-grid class="ion-no-padding">
+          <ion-row class="header-bg" [style.background-image]="'url(' + (diet.diet_image | image) + ')'" [ngStyle]="{'height': innerHeight}">
+            <div class="text">
+            <p class="time">{{diet.category_title}}</p>
+            <p class="name">{{diet.diet_title}}</p>
+          </div>
+      </ion-row>
+      </ion-grid>
+
+      <ion-toolbar no-border-top class="ion-no-padding" color="primary">
+      <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" mode="md">
+          <ion-segment-button value="0" mode="md">
+            <ion-label>{{strings.ST46}}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="1" mode="md">
+            <ion-label>{{strings.ST47}}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="2" mode="md">
+              <ion-label>{{strings.ST48}}</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>  
+
+      <ion-slides [options]="slideOpts" #slides (ionSlideDidChange)="slideChanged()" scrollbar="false">  
+          <ion-slide>
+              <ion-grid fixed>
+                  <ion-row>
+                      <ion-col size="3" class="col-icon">
+                      <img src="./assets/images/caloriesf.png">
+                      <p class="name">{{strings.ST45}}</p>
+                      <p class="value">{{diet.diet_calories}}</p>
+                      </ion-col>
+
+                      <ion-col size="3" class="col-icon">
+                          <img src="./assets/images/protein.png">
+                          <p class="name">{{strings.ST50}}</p>
+                          <p class="value">{{diet.diet_protein}}</p>
+                          </ion-col>
+                  
+                          <ion-col size="3" class="col-icon">
+                              <img src="./assets/images/fat.png">
+                              <p class="name">{{strings.ST51}}</p>
+                              <p class="value">{{diet.diet_fat}}</p>
+                              </ion-col>
+
+                              <ion-col size="3" class="col-icon">
+                                  <img src="./assets/images/carbs.png">
+                                  <p class="name">{{strings.ST52}}</p>
+                                  <p class="value">{{diet.diet_carbs}}</p>
+                                  </ion-col>
+
+                  </ion-row>
+                  <ion-row>
+                      <app-html [htmlcontent]="diet.diet_description" class="ion-text-left"></app-html>
+                  </ion-row>
+                </ion-grid>
+
+          </ion-slide>  
+          <ion-slide> <app-html [htmlcontent]="diet.diet_ingredients" class="ion-text-left"></app-html> </ion-slide>  
+          <ion-slide> <app-html [htmlcontent]="diet.diet_directions" class="ion-text-left"></app-html> </ion-slide>  
+        </ion-slides>  
+
+  </ion-content>

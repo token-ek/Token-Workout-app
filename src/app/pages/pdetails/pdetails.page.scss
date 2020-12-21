@@ -1,0 +1,76 @@
+.header-bg{
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bg .text{
+    color: #fff;
+    text-align: center;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.75) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 10%,rgba(0,0,0,0.75) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 10%,rgba(0,0,0,0.75) 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.header-bg .name{
+    color: #ffffff;
+    text-align: left;
+    margin: 0;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+}
+
+.header-bg .time{
+    color: var(--ion-color-primary);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cols{
+    background-color: var(--ion-color-primary);
+    padding: 10px 24px;
+    }
+
+.col-text{
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    align-items: center;
+    display: flex;
+}
+.cols ion-icon{
+    padding: 0 5px;
+}
+
+.date-category{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+}
+
+.date-category p{
+    margin: 0;
+    font-size: 13px;
+    display: inline-flex;
+    text-transform: uppercase;
+    padding-right: 10px;
+    color: #9e9e9e;
+}
+
+.date-category ion-icon{
+    margin-right: 5px;
+    font-size: 16px;
+}

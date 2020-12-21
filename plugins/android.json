@@ -1,0 +1,67 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-admob-free": {
+      "ADMOB_APP_ID": "ca-app-pub-2387490687776151~80XXXXXXX9",
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "1950541921919801",
+      "APP_NAME": "Six Pack Abs",
+      "FACEBOOK_HYBRID_APP_EVENTS": "false",
+      "FACEBOOK_ANDROID_SDK_VERSION": "5.5.2",
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-streaming-media": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.mycompany.testapp"
+    }
+  }
+}

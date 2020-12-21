@@ -1,0 +1,57 @@
+
+<ion-header *ngIf="!isLoading" class="darkheader" mode="ios" no-border>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+            {{strings.ST3}}
+          </ion-title>
+        <ion-buttons slot="start">
+          <app-backbutton color="light"></app-backbutton>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button [routerLink]="['/categories']">
+              <ion-icon mode="md" name="md-search" slot="end">
+              </ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content class="ion-no-padding">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <ion-slides *ngIf="isReady" [options]="slideOpts" mode="ios">
+    <ion-slide *ngFor="let item of diets" [routerLink]="['/ddetails', item.diet_id]">
+      <div class="card" [style.background-image]="'url(' + (item.diet_image | image) + ')'">
+        <div class="overlay">
+        <div class="texts">
+        <p>{{item.category_title}}</p>
+        <h1>{{item.diet_title}}</h1>
+        </div>
+      </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list style="margin: 0; padding: 0;">
+      <ion-list-header color="primary">
+        <ion-label style="font-weight: bold; letter-spacing: 0;">{{strings.ST41}}</ion-label>
+      </ion-list-header>
+    </ion-list>
+
+ <ion-grid>
+   <ion-row>
+     <ion-col size="6" *ngFor="let item of categories" [routerLink]="['/cdiets', item.category_id, item.category_title]">
+        <div class="cardcategory" [style.background-image]="'url(' + (item.category_image | image) + ')'">
+            <div class="overlay">
+            <div class="texts">
+            <h1>{{item.category_title}}</h1>
+            </div>
+          </div>
+          </div>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header class="darkheader" mode="ios" no-border>
+  <ion-toolbar mode="ios">
+    <ion-title class="ion-text-capitalize">
+      {{strings.ST73}}
+    </ion-title>
+      <ion-buttons slot="start">
+        <app-backbutton color="light"></app-backbutton>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+
+  <ion-grid class="ion-no-padding">
+    <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
+      <div class="text">
+        <ion-icon name="mail" mode="md" color="primary"></ion-icon>
+      <p class="title">{{strings.ST77}}</p>
+      <p class="subtitle">{{strings.ST76}}</p>
+    </div>
+    </ion-row>
+  </ion-grid>
+
+  <div class="ion-padding">
+
+  <form class="form" autocomplete="off" [formGroup]="validationsform" (ngSubmit)="sentMessage(validationsform.value)">
+    <ion-item>
+      <ion-label position="stacked">{{strings.ST78}}</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">{{strings.ST79}}</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">{{strings.ST80}}</ion-label>
+      <ion-textarea formControlName="message"></ion-textarea>
+    </ion-item>
+
+    <ion-button color="primary" type="submit" [disabled]="!validationsform.valid" expand="block" mode="ios">
+      {{strings.ST81}}
+    </ion-button>
+
+  </form>
+
+  </div>
+
+</ion-content>

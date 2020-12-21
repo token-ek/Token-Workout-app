@@ -1,0 +1,28 @@
+<ion-header class="lightheader" no-border>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+          {{strings.ST38}}
+        </ion-title>
+              <ion-buttons slot="start">
+                <app-backbutton color="dark"></app-backbutton>
+              </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding-top">
+  
+    <app-loading *ngIf="isLoading"></app-loading>
+
+
+    <ion-list lines="none" class="ion-padding-top">
+
+    <ion-item *ngFor="let item of equipments" [routerLink]="['/eequipments', item.equipment_id, item.equipment_title]" style="margin-bottom: 30px;">
+        <ion-avatar slot="start">
+          <img [src]="item.equipment_image | image">
+        </ion-avatar>
+        <ion-label>{{item.equipment_title}}</ion-label>
+      </ion-item>
+
+    </ion-list>
+
+</ion-content>
