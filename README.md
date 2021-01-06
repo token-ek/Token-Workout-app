@@ -6,4 +6,9 @@ Still a work in progress and just for demonstration and testing purposes of IONI
 initial signed apk download here: https://drive.google.com/file/d/11p9vtHXIGhyF0WARLpJJDdb0r8bxVh5i/view?usp=sharing
 still under development.
 
+deploy
+------
+run npm install
+run ionic serve
+
 happy codding!! :)
